@@ -1,0 +1,228 @@
+.tasks_page {
+  margin: 20px 10px;
+
+  .new_task {
+    margin: 20px;
+
+    button {
+      font-family: DINPro-Bold;
+      background: $yellow;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      outline: none;
+    }
+  }
+
+  .heading {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .tasks {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+
+    .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: $white;
+      border: 1px solid $yellow;
+      padding: 10px;
+      border-radius: 5px;
+
+      .task_title {
+        line-height: 1.5;
+        font-size: .9rem;
+      }
+
+      .task_status {
+        background: $grey;
+        position: relative;
+        width: 75px;
+        position: relative;
+        padding: 15px;
+        border-radius: 30px;
+
+        .on {
+          margin: 5px;
+          position: absolute;
+          background: $green;
+          padding: 10px;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+          animation: On .2s ease-in;
+        }
+
+        .off {
+          margin: 5px;
+          position: absolute;
+          background: $tomato;
+          padding: 10px;
+          border-radius: 50%;
+          top: 0;
+          right: 0;
+          animation: Off .2s ease-in;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .tasks_page {
+    margin: 20px 10px;
+    padding: 20px;
+
+    .new_task {
+      margin: 20px;
+
+      button {
+        font-family: DINPro-Bold;
+        background: $yellow;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        outline: none;
+        font-size: 1.2rem;
+      }
+    }
+
+    .heading {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .tasks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin: 40px 0;
+
+      .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $white;
+        border: 1px solid $yellow;
+        padding: 10px;
+        border-radius: 5px;
+
+        .task_title {
+          line-height: 1.5;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@include ipad {
+  .tasks_page {
+    margin: 20px 10px;
+    padding: 20px;
+
+    .new_task {
+      margin: 20px;
+
+      button {
+        font-family: DINPro-Bold;
+        background: $yellow;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        outline: none;
+        font-size: 1.4rem;
+      }
+    }
+
+    .heading {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .tasks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin: 40px 0;
+
+      .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $white;
+        border: 1px solid $yellow;
+        padding: 10px;
+        border-radius: 5px;
+
+        .task_title {
+          line-height: 1.5;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+@include lg {
+  .tasks_page {
+    margin: 20px 10px;
+    padding: 20px;
+
+    .new_task {
+      margin: 20px;
+
+      button {
+        font-family: DINPro-Bold;
+        background: $yellow;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        outline: none;
+        font-size: 1.4rem;
+      }
+    }
+
+    .heading {
+      margin: 20px;
+      text-align: center;
+
+      h3 {
+        font-size: 2rem;
+      }
+    }
+
+    .tasks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin: 40px 0;
+
+      .task {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $white;
+        border: 1px solid $yellow;
+        padding: 10px;
+        border-radius: 5px;
+
+        .task_title {
+          line-height: 1.5;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

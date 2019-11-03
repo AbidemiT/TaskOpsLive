@@ -1,0 +1,156 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding: 20px;
+  background: $white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+
+  .logo{
+    a {
+      font-family: DINPro-Bold;
+      font-weight: bolder;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+  .menu {
+    display: none;
+  }
+  .sm-menu {
+    .line {
+      width: 40px;
+      padding: 2px;
+      background: $black;
+      margin: 8px;
+      border-radius: 20px;
+      @include easeOut;
+    }
+  }
+  .cancel {
+    cursor: pointer;
+    @include transit;
+
+    .line {
+      width: 35px;
+      padding: 2px;
+      background: $black;
+      margin: 8px;
+      border-radius: 20px;
+      &:first-child {
+        transform: rotate(50deg);
+        margin-bottom: -13px;
+        @include easeIn;
+
+      }
+      &:nth-child(2) {
+        visibility: hidden;
+        @include easeIn;
+      }
+      &:last-child {
+        transform: rotate(-50deg);
+        margin-top: -11px;
+        @include easeIn;
+      }
+    }
+  }
+}
+
+@include md {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: $white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+
+    .logo{
+      a {
+        font-family: DINPro-Bold;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+    .menu {
+      display: flex;
+
+      li {
+        list-style-type: none;
+        margin-right: 30px;
+        a {
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .cta-outline {
+          padding: 5px 25px;
+          width: 100px;
+          background: $white;
+          border: 1.5px solid $yellow;
+          border-radius: 20px;
+
+          &:hover {
+            background: $yellow;
+            color: $white;
+            @include transit;
+          }
+        }
+      }
+    }
+    .sm-menu {
+      display: none;
+    }
+    .cancel {
+      display: none;
+    }
+  }
+}
+
+@include lg {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: $white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+
+    .logo{
+      a {
+        font-family: DINPro-Bold;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+    .menu {
+      display: flex;
+
+      li {
+        list-style-type: none;
+        margin-right: 30px;
+        a {
+          font-weight: 600;
+        }
+        .cta-outline {
+          padding: 5px 25px;
+          width: 100px;
+          background: $white;
+          border: 1.5px solid $yellow;
+          border-radius: 20px;
+
+          &:hover {
+            background: $yellow;
+            color: $white;
+            @include transit;
+          }
+        }
+      }
+    }
+    .sm-menu {
+      display: none;
+    }
+  }
+}

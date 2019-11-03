@@ -1,0 +1,118 @@
+$purple:#1C105A;
+$green: #00B882;
+$tomato: #EF4369;
+$grey:#f0f0f0;
+$white: #fff;
+$tomato: tomato;
+$white-transparent: #fffffff7;
+$yellow: #FF9C00;
+$dark-yellow: darken($yellow, 5%);
+$cream: #FFD28E;
+$black: #000;
+
+@mixin transit {
+  transition: all .5s ease-in-out;
+}
+
+@mixin bShadow {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+@mixin easeOut {
+  transition: all .3s ease-out;
+}
+@mixin easeIn {
+  transition: all .2s ease-in;
+}
+
+@mixin sm {
+  @media(min-width: 411px) {
+    @content;
+  }
+}
+@mixin md {
+  @media(min-width: 768px) {
+    @content;
+  }
+}
+@mixin ipad {
+  @media(min-width: 1024px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media(min-width: 1200px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media(min-width: 1201px) {
+    @content;
+  }
+}
+
+@keyframes On {
+    0% {
+      transform: translate(40px, 0);
+    }
+
+    50% {
+      transform: translate(20px, 0);
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
+@keyframes Off {
+    0% {
+      transform: translate(-40px, 0);
+    }
+
+    50% {
+      transform: translate(-20px, 0);
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
+@keyframes slideIn {
+    0% {
+      transform: translate(-100px,0);
+      background: $yellow;
+    }
+    25% {
+      transform: translate(-50px,0);
+      background: $yellow;
+    }
+
+    50% {
+      transform: translate(-20px,0);
+      background: $cream;
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
+@keyframes slideOut {
+    0% {
+      transform: translate(100px,0);
+      background: $yellow;
+    }
+    25% {
+      transform: translate(50px,0);
+      background: $yellow;
+    }
+
+    50% {
+      transform: translate(20px,0);
+      background: $cream;
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
+

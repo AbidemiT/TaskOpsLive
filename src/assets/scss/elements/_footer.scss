@@ -1,0 +1,43 @@
+.footer-container {
+  margin-top: 40px;
+  .foot {
+    display: flex;
+    // grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background: $yellow;
+    padding: 10px 40px;
+    color: $white;
+
+    .inner-footer {
+      display: grid;
+    grid-template-columns: 1fr;
+
+      div {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@include lg {
+  .footer-container {
+    margin-top: 40px;
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      background: $yellow;
+      padding: 10px 40px;
+      color: $white;
+
+      .inner-footer {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

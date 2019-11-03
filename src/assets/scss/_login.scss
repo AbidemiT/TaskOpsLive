@@ -1,0 +1,188 @@
+.login-container {
+  display: grid;
+  place-items: center;
+  margin: 40px;
+  background: $white;
+  padding: 20px;
+  border-radius: 10px;
+  @include bShadow;
+
+  form {
+    width: 100%;
+
+    .input-block {
+      margin: 10px 0;
+
+      label {
+        display: block;
+      }
+
+      input {
+        height: 40px;
+        min-width: 100%;
+        border-radius: 5px;
+        border: 1px solid $grey;
+        outline: none;
+        padding-left: 15px;
+
+        &:hover,&:focus {
+          border: 1px solid $yellow;
+          @include transit;
+        }
+      }
+      .isErr {
+        border:1px solid rgba(255, 0, 0, 0.795);
+        transition: all .3s ease-in;
+      }
+    }
+
+    button {
+      font-family: DINPro-Bold;
+      background: $yellow;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      outline: none;
+
+      &:hover {
+        background: $dark-yellow;
+        color: $white;
+        outline: none;
+        @include transit;
+      }
+    }
+  }
+
+  small {
+    margin: 10px;
+
+    a {
+      color: $yellow;
+    }
+  }
+}
+
+@include md {
+  .login-container {
+    display: grid;
+    place-items: center;
+    width: 50%;
+    margin: 40px auto;
+    background: $white;
+    padding: 40px;
+    border-radius: 10px;
+
+    form {
+      width: 100%;
+
+      .input-block {
+        margin: 10px 0;
+
+        label {
+          display: block;
+        }
+
+        input {
+          height: 40px;
+          min-width: 100%;
+          border-radius: 5px;
+          border: 1px solid $grey;
+          outline: none;
+          padding-left: 15px;
+
+          &:hover,&:focus {
+            border: 1px solid $yellow;
+            @include transit;
+          }
+        }
+      }
+
+      button {
+        font-family: DINPro-Bold;
+        background: $yellow;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        width: 100%;
+
+        &:hover {
+          background: $dark-yellow;
+          color: $white;
+          @include transit;
+        }
+      }
+    }
+
+    small {
+      margin: 10px;
+
+      a {
+        color: $yellow;
+      }
+    }
+  }
+}
+@include lg {
+  .login-container {
+    display: grid;
+    place-items: center;
+    width: 30%;
+    margin: 40px auto;
+    background: $white;
+    padding: 40px;
+    border-radius: 10px;
+
+    form {
+      width: 100%;
+
+      .input-block {
+        margin: 10px 0;
+
+        label {
+          display: block;
+        }
+
+        input {
+          height: 40px;
+          min-width: 100%;
+          border-radius: 5px;
+          border: 1px solid $grey;
+          outline: none;
+          padding-left: 15px;
+
+          &:hover,&:focus {
+            border: 1px solid $yellow;
+            @include transit;
+          }
+        }
+      }
+
+      button {
+        font-family: DINPro-Bold;
+        background: $yellow;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        width: 100%;
+
+        &:hover {
+          background: $dark-yellow;
+          color: $white;
+          @include transit;
+        }
+      }
+    }
+
+    small {
+      margin: 10px;
+
+      a {
+        color: $yellow;
+      }
+    }
+  }
+}
