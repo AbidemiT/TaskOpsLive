@@ -3,7 +3,7 @@
     <div class="drop-down">
       <router-link to="/user">Profile</router-link>
       <hr />
-      <a @click="logOut">LogOut</a>
+      <a class="cursor-pointer" @click="logOut">LogOut</a>
     </div>
   </div>
 </template>

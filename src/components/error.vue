@@ -1,6 +1,7 @@
 <template>
-  <div class="err">
-    <p>{{errTitle}}</p>
+  <div class="flex justify-between bg-red-400 p-3 rounded-full text-white w-10/12 mx-auto my-5">
+    <small class="bg-red-700 rounded-full px-2">Error</small>
+    <p class="text-red-600 text-center">{{errTitle}}</p>
   </div>
 </template>
 
@@ -17,13 +18,4 @@ export default {
 </script>
 
 <style scoped>
-  .err {
-    width: 60%;
-    margin: 20px auto;
-    text-align: center;
-    background: rgb(243, 120, 120);
-    padding: 10px;
-    border-radius: 10px;
-    color: #fff;
-  }
 </style>

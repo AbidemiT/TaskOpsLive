@@ -1,6 +1,8 @@
 <template>
-  <div class="tasks_page">
-    <div class="new_task">
+  <div>
+    <Navbar></Navbar>
+    <div class="tasks_page">
+      <div class="new_task">
       <button @click="newTask">New Task</button>
     </div>
     <div class="tasks" v-if="noTask !== 0">
@@ -8,8 +10,8 @@
         <h3 class="task_title">{{task.title}}</h3>
         
         <div class="task_status">
-          <span v-if="task.status" class="on" @click="toggle(i)"></span>
-          <span v-else class="off" @click="toggle(i)"></span>
+          <span v-if="task.status" class="on cursor-pointer" @click="toggle(i)"></span>
+          <span v-else class="off cursor-pointer" @click="toggle(i)"></span>
         </div>
       </div>
     </div>
@@ -27,16 +29,25 @@
           <span v-if="task.status" class="on" @click="completedToggle(i)"></span>
           <span v-else class="off" @click="completedToggle(i)"></span>
         </div> -->
-        <span @click="remove(index)" class="remove">x</span>
+        <span @click="remove(index)" class="remove cursor-pointer">x</span>
       </div>
     </div>
+    </div>
+    <Foot></Foot>
   </div>
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue";
+import Sidebar from "@/components/Sidebar.vue";
+import Foot from "@/components/Foot.vue";
 // import { mapState, mapMutations, mapGetters } from 'vuex'
 
 export default {
+  components: {
+    Navbar,
+    Foot
+  },
   data() {
     return {
       tasks: []

@@ -1,17 +1,29 @@
 <template>
-  <div class="new_task">
-        <div class="input_block">
-            <input :class="{error: isErr}" type="text" placeholder="Enter new Task" @keyup.enter="addTask" v-model="inputValue"/>
-            <button class="btn" @click="addTask">Add Task</button>
-            <small v-if="isErr">Can't Add an empty task</small>
+  <div class="">
+    <Navbar></Navbar>
+        <div class="flex justify-center items-center mt-10">
+            <input :class="{error: isErr}" class="rounded py-2 px-3 border border-gray-700 hover:border-yellow focus:border-yellow" type="text" placeholder="Enter new Task" @keyup.enter="addTask" v-model="inputValue"/>
+            <button class="btn py-2 px-3 bg-yellow text-white ml-1 rounded" @click="addTask">Add Task</button>
         </div>
+        <div class="flex justify-center items-center">
+          <small v-if="isErr">Can't Add an empty task</small>
+        </div>
+        <Foot></Foot>
   </div>
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue";
+import Sidebar from "@/components/Sidebar.vue";
+import Foot from "@/components/Foot.vue";
 // import { mapMutations } from 'vuex'
 
   export default {
+    components: {
+      Navbar,
+    Sidebar,
+    Foot
+    },
       data() {
           return {
               inputValue: '',
@@ -23,6 +35,9 @@
         addTask() {
             if(this.inputValue === ''){
               this.isErr = !this.isErr;
+              setTimeout(() => {
+                this.isErr = !this.isErr;
+              }, 5000);
             } else {
               this.tasks.push({title: this.inputValue, status: false});
               this.saveTask();
@@ -43,10 +58,13 @@
       text-align: center;
     }
     .new_task {
-        margin: 40px;
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
 
         .input_block {
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
 
             input {

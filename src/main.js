@@ -3,8 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "@/assets/scss/main.scss";
+import "@/assets/css/tailwind.css";
 import Axios from "axios";
 import Swal from "sweetalert2";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 window.Swal = Swal;
 
@@ -24,5 +27,8 @@ Vue.config.productionTip = false;
 new Vue({
   store,
   router,
+  created () {
+    AOS.init()
+  },
   render: h => h(App)
 }).$mount("#app");
