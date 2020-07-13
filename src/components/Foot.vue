@@ -1,11 +1,9 @@
 <template>
-  <div class="footer-container">
-    <div class="foot">
-        <div class="copyright">
+  <footer class="w-full flex flex-wrap py-4 px-6 bg-yellow fixed bottom-0">
+    <div class="copyright">
           <p>Copyright &copy; TaskOps 2019.</p>
         </div>
-    </div>
-  </div>
+  </footer>
 </template>
 
 <script>
